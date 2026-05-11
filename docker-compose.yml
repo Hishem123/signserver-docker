@@ -1,0 +1,17 @@
+services:
+  signserver:
+    image: keyfactor/signserver-ce:latest
+    container_name: signserver
+    hostname: localhost
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    environment:
+      ALLOW_ANY: "false"
+    volumes:
+      - ./certs/ManagementCA.pem:/mnt/external/secrets/tls/cas/ManagementCA.crt:ro
+      - signserver_data:/mnt/persistent
+
+volumes:
+  signserver_data:
