@@ -1,6 +1,8 @@
 # signserver-docker
 ## git clone repo
 git clone https://github.com/Hishem123/signserver-docker.git
+##
+cd signserver-docker/
 
 # Create the CA certificate
 mkdir -p certs
