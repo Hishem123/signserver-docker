@@ -5,8 +5,8 @@ services:
     hostname: localhost
     restart: unless-stopped
     ports:
-      - "8080:80"
-      - "8443:443"
+      - "8080:8080"
+      - "8443:8443"
     environment:
       ALLOW_ANY: "true"
     volumes:
